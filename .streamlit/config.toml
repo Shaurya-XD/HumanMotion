@@ -1,0 +1,17 @@
+[theme]
+base = "light"
+primaryColor = "#285F7D"
+backgroundColor = "#F8F9FB"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1D2730"
+font = "sans serif"
+
+[server]
+maxUploadSize = 30
+maxMessageSize = 35
+headless = true
+# Polling avoids watchdog's cross-drive path error on Windows (Python C:, project D:).
+fileWatcherType = "poll"
+
+[browser]
+gatherUsageStats = false

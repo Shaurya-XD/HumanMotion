@@ -1,0 +1,63 @@
+:root { --ink: #1d2730; --muted: #667483; --accent: #285f7d; --line: #e2e7ec; --fill: #f1f4f7; }
+.stApp { font-family: Inter, "Segoe UI", system-ui, sans-serif; }
+.block-container { max-width: 1140px; padding: 26px 24px 24px; }
+.app-brand { color: var(--ink); font-size: 17px; line-height: 1.4; font-weight: 650; letter-spacing: -.025em; }
+.app-intro { padding-top: 20px; padding-bottom: 8px; }
+.app-title { color: var(--ink); font-size: 32px; font-weight: 600; line-height: 1.2; letter-spacing: -.03em; }
+.app-intro p { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+/* Container keys scope typography/spacing to the actual workspace. */
+.st-key-input_panel, .st-key-result_panel { background: #fff; padding: 22px; gap: 12px; border-radius: 8px; }
+.panel-title { font-size: 16px; font-weight: 600; line-height: 1.4; color: var(--ink); letter-spacing: -.015em; }
+.st-key-input_panel [data-testid="stCaptionContainer"], .st-key-result_panel [data-testid="stCaptionContainer"] { color: var(--muted); font-size: 12px; line-height: 1.6; }
+.st-key-input_panel [data-testid="stWidgetLabel"] p { font-size: 13px; }
+.st-key-input_panel [data-testid="stFileUploaderDropzone"] { padding: 16px; border-radius: 6px; background: var(--fill); }
+.st-key-input_panel video { max-height: 300px; width: 100%; object-fit: contain; background: #111820; border-radius: 6px; }
+.st-key-input_panel button { border-radius: 6px; min-height: 38px; font-size: 13px; }
+.empty-result { padding: 38px 12px; margin: 8px 0 12px; background: #f8fafb; border-radius: 6px; text-align: center; }
+.empty-result p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+.prediction-summary { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 8px 0 12px; }
+.result-label { font-size: 12px; color: var(--muted); margin-bottom: 5px; }
+.result-action { font-size: 28px; font-weight: 600; line-height: 1.2; color: var(--ink); letter-spacing: -.02em; }
+.top-score { text-align: right; }
+.result-value { font-size: 23px; line-height: 1.3; font-weight: 550; color: var(--accent); font-variant-numeric: tabular-nums; }
+.score-heading { font-size: 12px; font-weight: 600; color: var(--muted); margin: 4px 0 0; }
+.score-row { margin-bottom: 10px; }
+.score-row > div:first-child { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--ink); margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+.score-track { background: var(--fill); border-radius: 3px; height: 6px; overflow: hidden; }
+.score-track > div { background: var(--accent); height: 100%; border-radius: 3px; }
+.comparison-title { color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.4; margin: 4px 0 0; }
+.model-scores { border-top: 1px solid var(--line); padding: 14px 0 8px; }
+.model-scores header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; margin-bottom: 14px; font-size: 13px; color: var(--ink); }
+.model-scores header span { color: var(--muted); font-size: 12px; }
+.model-scores p { color: var(--muted); font-size: 11px; line-height: 1.5; font-variant-numeric: tabular-nums; margin: 10px 0 0; }
+.comparison-score { margin-bottom: 9px; }
+.comparison-score > div:first-child { font-size: 12px; }
+.comparison-score .score-track { height: 5px; }
+.comparison-table-wrap { max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
+.comparison-table-wrap:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.comparison-table { width: 100%; border-collapse: collapse; background: white; font-size: 12px; white-space: nowrap; }
+.comparison-table caption { text-align: left; padding: 9px 12px; color: var(--muted); font-size: 11px; }
+.comparison-table th { background: var(--fill); text-align: left; color: var(--muted); font-weight: 600; }
+.comparison-table td, .comparison-table th { padding: 9px 12px; border-top: 1px solid var(--line); }
+.comparison-table td.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+.st-key-input_panel button:focus-visible,
+.st-key-comparison_panel button:focus-visible,
+.st-key-comparison_panel summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .block-container { padding: 22px 16px 20px; }
+  .app-intro { padding-top: 18px; padding-bottom: 6px; }
+  .app-title { font-size: 26px; }
+  .st-key-input_panel, .st-key-result_panel { padding: 18px; gap: 12px; }
+  .st-key-input_panel [data-testid="stFileUploaderDropzone"] { padding: 12px; }
+  .empty-result { padding: 26px 12px; }
+  .prediction-summary { gap: 12px; }
+  .result-action { font-size: 25px; }
+  .result-value { font-size: 21px; }
+}
+.st-key-comparison_panel { margin-top: 4px; }
+.st-key-comparison_panel [data-testid="stCaptionContainer"] { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.st-key-comparison_panel [data-testid="stExpander"] { background: #fff; border-radius: 8px; }
+.st-key-comparison_panel [data-testid="stExpander"] summary { font-size: 14px; padding: 12px 18px; }
+.st-key-comparison_panel [data-testid="stExpanderDetails"] { padding: 18px; }
+/* Keep the native toolbar unobtrusive without covering the brand at the page top. */
+header[data-testid="stHeader"] { background: transparent; }

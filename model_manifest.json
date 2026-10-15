@@ -1,0 +1,27 @@
+{
+  "project": "MotionMirror",
+  "model_name": "mvit_v2_s",
+  "checkpoint_filename": "models/model.pth",
+  "class_to_index": {
+    "walk": 0,
+    "pushup": 1,
+    "sit": 2,
+    "drink": 3,
+    "clap": 4
+  },
+  "num_frames": 16,
+  "frame_size": 224,
+  "temporal_window_seconds": 2.0,
+  "selection_basis": "validation_macro_f1",
+  "deployment_target": "Streamlit Community Cloud (free CPU)",
+  "normalization_mean": [
+    0.45,
+    0.45,
+    0.45
+  ],
+  "normalization_std": [
+    0.225,
+    0.225,
+    0.225
+  ]
+}
